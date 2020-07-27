@@ -899,7 +899,7 @@ static void *setup_malloc(vorb *f, int sz)
       f->setup_offset += sz;
       return p;
    }
-   return sz ? malloc(sz) : NULL;
+   return malloc(sz);
 }
 
 static void setup_free(vorb *f, void *p)
